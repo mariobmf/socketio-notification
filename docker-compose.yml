@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  api:
+    container_name: api
+    build:
+      context: ./
+    volumes:
+      - .:/app
+      - nodemodulesapi:/app/node_modules
+    command: yarn dev:server 
+    ports:
+      - "3333:3333"
+
+volumes:
+  nodemodulesapi:
