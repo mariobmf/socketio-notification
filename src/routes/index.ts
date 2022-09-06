@@ -6,7 +6,7 @@ import SendNotificationToUserService from '../services/SendNotificationToUserSer
 const routes = Router();
 
 routes.post('/send-notification-to-user', (req, res) => {
-  const { user_id, event_name, message } = req.body;
+  const { user_id, message } = req.body;
 
   const sendNotification = container.resolve(SendNotificationToUserService);
 
